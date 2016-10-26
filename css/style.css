@@ -1,0 +1,40 @@
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+  line-height: 1.8;
+}
+
+h1 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 30px;
+  color: rgb(50, 66, 92);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 30px;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+
+article.catalog-item h1 {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  line-height: 1.1;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.promo > article h1 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  line-height: 1.25;
+  font-weight: bold;
+  text-align: left;
+}

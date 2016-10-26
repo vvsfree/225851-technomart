@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -69,7 +70,7 @@
   </header>
   <section class="catalog">
     <div class="catalog-filter">
-      <h2>Фильтр:</h2>
+      <span class="catalog-filter-title">Фильтр:</span>
       <form>
         <fieldset>
           <legend>Цена:</legend>
@@ -113,7 +114,7 @@
       </form>
     </div>
     <div class="catalog-sort">
-      <h2>Сортировка:</h2>
+      <span class="catalog-sort-title">Сортировка:</span>
       <ul class="catalog-sort-type">
         <li>По цене</li>
         <li><a href="#">По типу</a></li>
@@ -126,7 +127,7 @@
     </div>
     <div class="catalog-items">
       <article class="catalog-item">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+        <img src="img/item-bfg-3000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 3000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -138,7 +139,7 @@
         <a href="#" class="price">15500 Р.</a>
       </article>
       <article class="catalog-item">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+        <img src="img/item-bfg-6000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 6000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -150,7 +151,7 @@
         <a href="#" class="price">25500 Р.</a>
       </article>
       <article class="catalog-item catalog-item-new">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+        <img src="img/item-bfg-2000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 2000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -161,7 +162,7 @@
         <a href="#" class="price">12500 Р.</a>
       </article>
       <article class="catalog-item">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+        <img src="img/item-bfg-3000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 3000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -172,8 +173,8 @@
         <p class="old-price">22500 Р.</p>
         <a href="#" class="price">15500 Р.</a>
       </article>
-      <article class="catalog-item">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+      <article class="catalog-item catalog-item-new">
+        <img src="img/item-bfg-6000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 6000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -184,8 +185,8 @@
         <p class="old-price">30500 Р.</p>
         <a href="#" class="price">25500 Р.</a>
       </article>
-      <article class="catalog-item catalog-item-new">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+      <article class="catalog-item">
+        <img src="img/item-bfg-2000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 2000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -195,8 +196,8 @@
         <h1>Перфоратор BOSCH BFG 2000</h1>
         <a href="#" class="price">12500 Р.</a>
       </article>
-      <article class="catalog-item">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+      <article class="catalog-item catalog-item-new">
+        <img src="img/item-bfg-3000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 3000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -208,7 +209,7 @@
         <a href="#" class="price">15500 Р.</a>
       </article>
       <article class="catalog-item">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+        <img src="img/item-bfg-6000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 6000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -219,8 +220,8 @@
         <p class="old-price">30500 Р.</p>
         <a href="#" class="price">25500 Р.</a>
       </article>
-      <article class="catalog-item catalog-item-new">
-        <img src="http://placehold.it/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+      <article class="catalog-item">
+        <img src="img/item-bfg-2000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 2000">
         <div class="catalog-item-controls">
           <ul>
             <li><a href="#" class="catalog-item-buy">Купить</a></li>
@@ -249,7 +250,7 @@
     </div>
     <div class="dialog catalog-cart">
       <a href="#"><img src="http://placehold.it/21x21" width="21" height="21" alt="Закрыть"></a>
-      <h1>Товар добавлен в корзину!</h1>
+      <span class="dialog-message">Товар добавлен в корзину!</span>
       <div class="dialog-controls">
         <a href="#" class="catalog-cart-order">Оформить заказ</a>
         <a href="#" class="catalog-cart-continue">Продолжить покупки</a>
