@@ -1,3 +1,19 @@
+html,
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, ul, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -20,7 +36,158 @@ h2 {
   text-transform: uppercase;
 }
 
-article.catalog-item h1 {
+header {
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid green;
+}
+
+section {
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid green;
+}
+
+footer {
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid green;
+}
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid crimson;
+}
+
+.header-top {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #293449;
+}
+
+.header-top a {
+  color: white;
+}
+
+.header-logo {
+  float: left;
+  width: 220px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
+}
+
+.header-search {
+  float: left;
+  width: 270px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
+}
+
+.header-bookmarks {
+  float: left;
+  width: 106px;
+  padding-left: 44px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
+}
+
+.header-cart {
+  float: left;
+  width: 106px;
+  padding-left: 44px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
+}
+
+.header-order {
+  float: left;
+  width: 106px;
+  padding-left: 44px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
+}
+
+.promo {
+  padding-top: 60px;
+}
+
+.promo-item {
+  float: left;
+  width: 256px;
+  padding: 22px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid darkblue;
+}
+
+.promo-item:first-child {
+  margin-left: 0;
+}
+
+.slider {
+  float: left;
+}
+
+#slide2 {
+  display: none;
+}
+
+.section-header {
+  height: 90px;
+  background-color: #f7f3ec;
+  margin-bottom: 20px;
+}
+
+.section-header-left {
+  float: left;
+  padding: 30px;
+}
+
+.section-header-right {
+  float: right;
+  padding: 25px;
+}
+
+.section-content {
+  font-size: 0;
+}
+
+.catalog-item {
+  display: inline-block;
+  width: 220px;
+  vertical-align: top;
+  font-size: 17px;
+  line-height: 1.06;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid darkblue;
+}
+
+.catalog-item:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.catalog-item h1 {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   color: rgb(0, 0, 0);
@@ -29,7 +196,31 @@ article.catalog-item h1 {
   text-align: center;
 }
 
+.brand {
+  display: inline-block;
+  width: 220px;
+  height: 145px;
+  vertical-align: top;
+  margin-right: 20px;
+  margin-bottom: 20px;
 
+  /*Для визуального выделения элемента*/
+  outline: 2px solid darkblue;
+}
+
+.brand:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.brand img {
+  display: block;
+  margin: 0 auto;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid red;
+}
+
+/* TODO: CHECK IT
 .promo > article h1 {
   font-family: "Cuprum", sans-serif;
   font-size: 24px;
@@ -37,4 +228,57 @@ article.catalog-item h1 {
   line-height: 1.25;
   font-weight: bold;
   text-align: left;
+}
+*/
+
+.footer-bottom {
+  font-family: "Cuprum", sans-serif;
+  font-size: 16px;
+  line-height: 1.1;
+  color: #fff;
+  background-color: #293449;
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+
+.footer-bottom a {
+  color: #ffd180;
+}
+
+.footer-company {
+  float: left;
+  width: 240px;
+  margin-right: 150px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
+}
+
+.footer-social {
+  float: left;
+  width: 150px;
+  margin-right: 100px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
+}
+
+.footer-creator-mail {
+  float: left;
+  width: 140px;
+  text-align: left;
+  margin-right: 20px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
+}
+
+.footer-creator-address {
+  float: left;
+  width: 112px;
+  text-align: left;
+  padding-left: 28px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid whitesmoke;
 }
