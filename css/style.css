@@ -63,6 +63,10 @@ footer {
   outline: 2px solid green;
 }
 
+.base-button {
+  color: white;
+}
+
 .clearfix::after {
   content: "";
 
@@ -213,11 +217,13 @@ footer {
 
 .promo {
   padding-top: 60px;
+  margin-bottom: 32px;
 }
 
 .promo-item {
   float: left;
   width: 256px;
+  height: 79px;
   padding: 22px;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -232,10 +238,79 @@ footer {
 
 .slider {
   float: left;
+  position: relative;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid darkblue;
+}
+
+.slider input[type=radio] {
+  display: none;
+}
+
+.slide {
+  display: none;
+  width: 620px;
+  height: 266px;
+  color: white;
+}
+
+#slide1 {
+  background: url("../img/slide1.jpg") no-repeat 0 0;
 }
 
 #slide2 {
-  display: none;
+  background: url("../img/slide2.jpg") no-repeat 0 0;
+}
+
+.slider-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+}
+
+.slider-controls .slider-left {
+  float: left;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.slider-controls .slider-right {
+  float: right;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.slider-controls .slider-dots {
+  clear: both;
+  text-align: center;
+}
+
+.slider-controls .slider-dots .slider-btn {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  background-color: #cccccc;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"].slider-btn,
+#btn-2:checked ~ .slider-controls label[for="btn-2"].slider-btn {
+  background-color: red;
+}
+
+#btn-1:checked ~ .slides #slide1 {
+  display: block;
+}
+
+#btn-2:checked ~ .slides #slide2 {
+  display: block;
 }
 
 .section-header {
@@ -271,7 +346,7 @@ footer {
   outline: 2px solid darkblue;
 }
 
-.catalog-item:nth-of-type(4n) {
+.items .section-content .catalog-item:nth-of-type(4n) {
   margin-right: 0;
 }
 
@@ -282,6 +357,12 @@ footer {
   line-height: 1.1;
   font-weight: bold;
   text-align: center;
+  text-transform: none;
+  padding: 0 30px;
+}
+
+.catalog-item a {
+  text-decoration: none;
 }
 
 .brands {
@@ -315,17 +396,6 @@ footer {
   /*Для визуального выделения элемента*/
   outline: 2px solid red;
 }
-
-/* TODO: CHECK IT
-.promo > article h1 {
-  font-family: "Cuprum", sans-serif;
-  font-size: 24px;
-  color: rgb(255, 255, 255);
-  line-height: 1.25;
-  font-weight: bold;
-  text-align: left;
-}
-*/
 
 .services {
   padding-top: 64px;
@@ -413,6 +483,109 @@ footer {
 
 .company-map-popup {
   display: none;
+}
+
+.page {
+  padding-top: 23px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid green;
+}
+
+.page-breadcrumbs {
+  margin-bottom: 25px;
+}
+
+.page-title {
+  padding-left: 28px;
+  padding-top: 32px;
+  padding-bottom: 34px;
+  background-color: #f2f6f8;
+}
+
+.catalog {
+  margin-top: 20px;
+}
+
+.catalog-filter {
+  float: left;
+  width: 220px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid orange;
+}
+
+.catalog-filter-title {
+  display: inline-block;
+  background-color: #f7f3ec;
+}
+
+.catalog-items {
+  float: right;
+  width: 700px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid orange;
+}
+
+.catalog-block-header {
+  padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 18px;
+  background-color: #f7f3ec;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.catalog-sort-title,
+.catalog-sort-type,
+.catalog-sort-order {
+  float: left;
+  margin-right: 10px;
+}
+
+.catalog-sort-type li {
+  display: inline-block;
+}
+
+.catalog-sort-order li {
+  display: inline-block;
+}
+
+.catalog-gallery {
+  font-size: 0;
+  margin-bottom: 32px;
+
+  /*Для визуального выделения элемента*/
+  outline: 2px solid mediumvioletred;
+}
+
+.page .catalog .catalog-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.catalog-item-controls {
+  display: none;
+}
+
+.catalog-cart {
+  display: none;
+}
+
+.catalog-pager {
+  /*Для визуального выделения элемента*/
+  outline: 2px solid darkkhaki;
+}
+
+.catalog-pager li {
+  display: inline-block;
+}
+
+.category {
+  margin-top: 60px;
+  padding-top: 63px;
+  padding-bottom: 73px;
+  background-color: #f2f6f8;
 }
 
 footer {
