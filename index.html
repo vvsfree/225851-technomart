@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,7 +11,7 @@
 <header>
   <section class="header-top">
     <div class="container clearfix">
-      <a href="#" class="logo header-logo">Техномарт</a>
+      <a href="index.html" class="logo header-logo">Техномарт</a>
       <form class="header-search">
         <input type="text" class="header-search-input" id="search" placeholder="Поиск:"><label for="search"></label>
       </form>
@@ -33,9 +33,12 @@
           <small class="header-company-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</small>
         </div>
         <div class="header-user">
-          <a href="#" class="header-user-sign-out">Равшан Джамшутович</a>
-          <a href="#">Мои заказы</a>
-          <a href="#">Личный кабинет</a>
+          <div class="header-user-wrapper">
+            <a href="#" class="header-profile">Равшан Джамшутович</a>
+            <a href="#" class="header-sign-out"></a>
+          </div>
+          <a href="#" class="header-user-order">Мои заказы</a>
+          <a href="#" class="header-user-cabinet">Личный кабинет</a>
         </div>
         <div class="header-sign active">
           <a href="#" class="header-sign-in">Войти</a>
@@ -85,17 +88,15 @@
           </div>
         </div>
         <div class="slider-controls">
-          <div class="slider-controls-row1 clearfix">
+          <div class="slider-arrows clearfix">
             <label for="btn-1" class="slider-left"><img src="img/icon-left.png" width="22" height="40" alt="Стрелка налево"></label>
             <label for="btn-2" class="slider-right"><img src="img/icon-right.png" width="22" height="40" alt="Стрелка направо"></label>
           </div>
-          <div class="sllder-controls-row2">
-            <a href="#" class="base-button">Открыть каталог</a>
-            <div class="slider-dots">
-              <label for="btn-1" class="slider-btn"></label>
-              <label for="btn-2" class="slider-btn"></label>
-            </div>
+          <div class="slider-dots">
+            <label for="btn-1" class="slider-btn"></label>
+            <label for="btn-2" class="slider-btn"></label>
           </div>
+          <a href="#" class="base-button">Открыть каталог</a>
         </div>
       </div>
       <div class="promo-item promo-discount">
@@ -188,16 +189,38 @@
       <p class="services-motto">Хороший интернет-магазин отличается от плохого не только ценами!
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <div class="services-block clearfix">
+        <input type="radio" name="services-item" id="delivery" checked>
+        <input type="radio" name="services-item" id="guarantee">
+        <input type="radio" name="services-item" id="credit">
         <ul class="services-list">
-          <li class="active"><span>Доставка</span></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Кредит</a></li>
+          <li><label for="delivery">Доставка</label></li>
+          <li><label for="guarantee">Гарантия</label></li>
+          <li><label for="credit">Кредит</label></li>
         </ul>
-        <div class="services-item">
-          <h3>Доставка</h3>
-          <p>
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш на этаж!
-          </p>
+        <div class="services-items">
+          <div class="services-item delivery">
+            <h3>Доставка</h3>
+            <p>
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+              Ведь мы неплохо заработаем,<br>поднимая его на ваш на этаж!
+            </p>
+          </div>
+          <div class="services-item guarantee">
+            <h3>Гарантия</h3>
+            <p>
+              Если купленный у нас товар поломается или заискрит,<br>
+              а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+              Дом уж восстановите как-нибудь сами.
+            </p>
+          </div>
+          <div class="services-item credit">
+            <h3>Кредит</h3>
+            <p>
+              Залезть в долговую яму стало проще!
+              Кредитные консультанты придут вам на помощь.
+            </p>
+            <a href="#" class="base-button">Отправить заявку</a>
+          </div>
         </div>
       </div>
     </div>
@@ -227,23 +250,8 @@
         </div>
         <a href="#" class="base-button">Заблудились? Напишите нам!</a>
       </div>
-      <div class="dialog company-form">
-        <a href="#"><img src="http://placehold.it/21x21" width="21" height="21" alt="Закрыть"></a>
-        <form>
-          <label for="customer-name">Ваше имя:</label>
-          <input type="text" id="customer-name" name="customer-name" placeholder="Представьтесь, пожалуйста">
-          <label for="customer-email">Ваш e-mail:</label>
-          <input type="email" id="customer-email" name="customer-email" placeholder="Для отправки ответа">
-          <label for="customer-message">Текст письма:</label>
-          <textarea id="customer-message" name="customer-message" placeholder="В свободной форме"></textarea>
-          <div class="dialog-controls">
-            <button type="submit">Отправить</button>
-          </div>
-        </form>
-      </div>
       <div class="company-map-popup">
-        <a href="#"><img src="http://placehold.it/21x21" width="21" height="21" alt="Закрыть"></a>
-        <img src="img/map-full.jpg" width="940" height="446" alt="Полная карта">
+        <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
       </div>
     </div>
   </section>
@@ -252,7 +260,7 @@
   <section class="footer-top">
     <div class="container">
       <div class="footer-row clearfix">
-        <a href="#" class="logo footer-logo">Техномарт</a>
+        <a href="index.html" class="logo footer-logo">Техномарт</a>
         <div class="footer-company-menu">
           <a href="#">Компания</a>
           <a href="#">Новости</a>
@@ -297,5 +305,25 @@
     </div>
   </section>
 </footer>
+<div class="dialog company-form">
+  <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
+  <form>
+    <div class="dialog-content clearfix">
+      <div class="dialog-content-left">
+        <label for="customer-name">Ваше имя:</label>
+        <input type="text" id="customer-name" name="customer-name" placeholder="Представьтесь, пожалуйста">
+      </div>
+      <div class="dialog-content-right">
+        <label for="customer-email">Ваш e-mail:</label>
+        <input type="email" id="customer-email" name="customer-email" placeholder="Для отправки ответа">
+      </div>
+      <label for="customer-message">Текст письма:</label>
+      <textarea id="customer-message" name="customer-message" placeholder="В свободной форме"></textarea>
+    </div>
+    <div class="dialog-controls">
+      <button type="submit" class="base-button company-form-submit">Отправить</button>
+    </div>
+  </form>
+</div>
 </body>
 </html>

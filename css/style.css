@@ -56,6 +56,7 @@ h3 {
   box-sizing: border-box;
 
   background-color: #ee3643;
+  border: none;
   border-radius: 3px;
 }
 
@@ -325,58 +326,74 @@ header {
   text-align: left;
 }
 
-.header-sign-out {
-  position: relative;
-  display: block;
+.header-user-wrapper {
   width: 300px;
   margin-bottom: 8px;
-  padding: 12px 41px 12px 48px;
+  font-size: 0;
+  background-color: #ffffff;
+}
+
+.header-user-wrapper .header-profile {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 259px;
+  padding: 12px 0 12px 48px;
   box-sizing: border-box;
   font-size: 21px;
   line-height: 18px;
   text-decoration: none;
   color: #000000;
-  background-color: #ffffff;
 }
 
-.header-sign-out::before {
-  content: url("../img/icon-user.png");
+.header-user-wrapper .header-profile::before {
+  content: "";
   position: absolute;
   left: 14px;
   top: 50%;
   margin-top: -9px;
   width: 20px;
   height: 18px;
+  background: url("../img/icon-user.png") no-repeat;
 }
 
-.header-sign-out:hover::before {
-  content: url("../img/icon-user-blue.png");
+.header-user-wrapper:hover .header-profile::before {
+  background: url("../img/icon-user-blue.png") no-repeat;
 }
 
-.header-sign-out:active::before {
-  content: url("../img/icon-user.png");
+.header-user-wrapper:active .header-profile::before {
+  background: url("../img/icon-user.png") no-repeat;
 }
 
-.header-sign-out::after {
-  content: url("../img/icon-logout.png");
+.header-user-wrapper:active .header-profile {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.header-user-wrapper .header-sign-out {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 41px;
+  background-color: #ffffff;
+}
+
+.header-user-wrapper .header-sign-out::after {
+  content: "";
   position: absolute;
   right: 9px;
   top: 50%;
   margin-top: -9px;
   width: 21px;
   height: 17px;
+  background: url("../img/icon-logout.png") no-repeat;
 }
 
-.header-sign-out:hover::after {
-  content: url("../img/icon-logout-blue.png");
+.header-user-wrapper:hover .header-sign-out::after {
+  background: url("../img/icon-logout-blue.png") no-repeat;
 }
 
-.header-sign-out:active::after {
-  content: url("../img/icon-logout.png");
-}
-
-.header-sign-out:active {
-  color: rgba(0, 0, 0, 0.3);
+.header-user-wrapper:active .header-sign-out::after {
+  background: url("../img/icon-logout.png") no-repeat;
 }
 
 .header-sign {
@@ -420,19 +437,22 @@ header {
 }
 
 .header-sign-in::before {
-  content: url("../img/icon-login.png");
+  content: "";
   position: absolute;
   left: 15px;
   top: 50%;
   margin-top: -9px;
+  width: 20px;
+  height: 17px;
+  background: url("../img/icon-login.png") no-repeat;
 }
 
 .header-sign-in:hover::before {
-  content: url("../img/icon-login-blue.png");
+  background: url("../img/icon-login-blue.png") no-repeat;
 }
 
 .header-sign-in:active::before {
-  content: url("../img/icon-login.png");
+  background: url("../img/icon-login.png") no-repeat;
 }
 
 .header-sign-up {
@@ -668,50 +688,53 @@ header {
   padding: 114px 19px 22px 26px;
 }
 
-.slider-controls-row1 {
+.slider-controls .slider-arrows {
   margin-bottom: 52px;
 }
 
-.slider-controls-row1 img {
+.slider-controls .slider-arrows img {
   display: block;
 }
 
-.slider-controls .slider-left {
+.slider-controls .slider-arrows .slider-left {
   float: left;
   cursor: pointer;
 }
 
-.slider-controls .slider-right {
+.slider-controls .slider-arrows .slider-right {
   float: right;
   cursor: pointer;
 }
 
-.sllder-controls-row2 .base-button {
-  display: inline-block;
-  padding: 10px 45px 10px 49px;
-  margin-right: 70px;
-}
-
-.sllder-controls-row2 .slider-dots {
-  display: inline-block;
-}
-
 .slider-controls .slider-dots {
-  clear: both;
+  display: block;
+  font-size: 0;
   text-align: center;
+  padding-top: 11px;
+  padding-right: 4px;
 }
 
 .slider-controls .slider-dots .slider-btn {
   display: inline-block;
   width: 6px;
   height: 6px;
-  margin: 0 3px;
-  background-color: #cccccc;
-  border: 2px solid white;
+  margin-right: 10px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
-  transition: background-color 0.2s;
   cursor: pointer;
+}
+
+.slider-controls .slider-dots .slider-btn:last-child {
+  margin-right: 0;
+}
+
+.slider-controls .base-button {
+  position: absolute;
+  bottom: 22px;
+  left: 27px;
+  padding: 10px 45px 10px 49px;
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"].slider-btn,
@@ -818,6 +841,7 @@ header {
   color: white;
   background: #ee3643;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .catalog-item-price:after {
@@ -939,6 +963,10 @@ header {
   margin-bottom: 68px;
 }
 
+.services-block input[type=radio] {
+  display: none;
+}
+
 .services-list {
   position: relative;
   float: left;
@@ -964,8 +992,7 @@ header {
   line-height: 30px;
 }
 
-.services-list a,
-.services-list span {
+.services-list label {
   color: #ffffff;
   text-decoration: none;
 
@@ -978,34 +1005,77 @@ header {
   box-shadow:
     inset 0 1px 0 0 #405069,
     inset 0 -1px 0 0 #293449;
+
+  cursor: pointer;
 }
 
-.services-list a:hover {
+.services-list li:not(.active) a:hover {
   background-color: #293449;
 }
 
-.services-list li.active span {
+#delivery:checked ~ .services-list label[for="delivery"],
+#guarantee:checked ~ .services-list label[for="guarantee"],
+#credit:checked ~ .services-list label[for="credit"] {
   color: #32425c;
-
   background-color: #ffffff;
   box-shadow: none;
+  cursor: default;
+}
+
+.services-items {
+  float: right;
+  width: 620px;
 }
 
 .services-item {
-  float: right;
-  width: 620px;
+  display: none;
   min-height: 280px;
   padding-top: 5px;
-  background: url("../img/truck.png") right 25px no-repeat;
 }
 
-.services-item p {
+#delivery:checked ~ .services-items .services-item.delivery,
+#guarantee:checked ~ .services-items .services-item.guarantee,
+#credit:checked ~ .services-items .services-item.credit {
+  display: block;
+}
+
+.services-item .base-button {
+  margin-top: 15px;
+  padding-left: 46px;
+  padding-right: 44px;
+}
+
+.services-item.delivery {
+  background: url("../img/srv-truck.png") right 25px no-repeat;
+}
+
+.services-item.delivery p {
+  width: 278px;
+}
+
+.services-item.guarantee {
+  background: url("../img/srv-guarantee.png") 240px 3px no-repeat;
+}
+
+.services-item.guarantee p {
+  width: 378px;
+}
+
+.services-item.credit {
+  background: url("../img/srv-credit.png") 182px top no-repeat;
+}
+
+.services-item.credit p {
   width: 280px;
 }
 
 .company {
   padding-top: 83px;
   padding-bottom: 86px;
+}
+
+.company .container {
+  position: relative;
 }
 
 .company h2,
@@ -1035,7 +1105,7 @@ header {
 }
 
 .company-contacts .base-button {
-  width: 300px;
+  width: 100%;
   padding-left: 64px;
 }
 
@@ -1095,7 +1165,16 @@ header {
 }
 
 .company-map-popup {
+  position: absolute;
+  top: -49px;
+  left: 10px;
+  z-index: 15;
+
   display: none;
+  width: 940px;
+  height: 446px;
+  background: url("../img/map-full.jpg") 0 0 no-repeat;
+  box-shadow: 0 0 15px 1px rgba(35, 31, 32, 0.5);
 }
 
 .page {
@@ -1726,4 +1805,160 @@ footer {
 .footer-creator-address a:active {
   color: #ee3643;
   text-decoration: none;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 620px;
+  z-index: 20;
+
+  background-color: #ffffff;
+  border-top: 7px solid #ee3643;
+  box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+}
+
+.dialog .dialog-content {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  padding: 46px 80px 17px 80px;
+}
+
+.dialog .dialog-content-left {
+  float: left;
+  width: 220px;
+}
+
+.dialog .dialog-content-right {
+  float: right;
+  width: 220px;
+}
+
+.dialog .dialog-content label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.dialog .dialog-content input,
+.dialog .dialog-content textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+
+  width: 100%;
+  height: 38px;
+  margin-bottom: 20px;
+  padding-left: 14px;
+
+  box-sizing: border-box;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+}
+
+.dialog .dialog-content textarea {
+  min-height: 114px;
+  padding-top: 7px;
+}
+
+.dialog-content .dialog-message {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  padding-left: 101px;
+  margin-top: 24px;
+  margin-bottom: 58px;
+
+  font-size: 30px;
+}
+
+.dialog-content .dialog-message::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  margin-top: -33px;
+  width: 66px;
+  height: 66px;
+  background-color: #63a63e;
+  border-radius: 50%;
+}
+
+.dialog-content .dialog-message::after {
+  content: url("../img/icon-check.png");
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -13px;
+  width: 39px;
+  height: 30px;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+
+  width: 21px;
+  height: 21px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.dialog-close::before,
+.dialog-close::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+
+  left: -3px;
+  width: 26px;
+  height: 5px;
+  background-color: #ee3643;
+}
+
+.dialog-close::before {
+  transform: rotate(45deg);
+}
+
+.dialog-close::after {
+  transform: rotate(-45deg);
+}
+
+.dialog-controls {
+  padding: 37px 80px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.dialog-controls .base-button {
+  width: 100%;
+}
+
+.dialog-controls .catalog-cart-order {
+  float: left;
+  width: 220px;
+}
+
+.dialog-controls .catalog-cart-continue {
+  float: right;
+  width: 220px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.dialog-controls .catalog-cart-continue:hover {
+  color: #ee3643;
+}
+
+.dialog-controls .catalog-cart-continue:active {
+  color: rgba(0, 0, 0, 0.3);
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,7 +11,7 @@
 <header>
   <section class="header-top">
     <div class="container clearfix">
-      <a href="#" class="logo header-logo">Техномарт</a>
+      <a href="index.html" class="logo header-logo">Техномарт</a>
       <form class="header-search">
         <input type="text" class="header-search-input" id="search" placeholder="Поиск:"><label for="search"></label>
       </form>
@@ -33,7 +33,10 @@
           <small class="header-company-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</small>
         </div>
         <div class="header-user active">
-          <a href="#" class="header-sign-out">Равшан Джамшутович</a>
+          <div class="header-user-wrapper">
+            <a href="#" class="header-profile">Равшан Джамшутович</a>
+            <a href="#" class="header-sign-out"></a>
+          </div>
           <a href="#" class="header-user-order">Мои заказы</a>
           <a href="#" class="header-user-cabinet">Личный кабинет</a>
         </div>
@@ -228,14 +231,6 @@
           <a href="#">3</a>
           <a href="#">Следующая</a>
         </div>
-        <div class="dialog catalog-cart">
-          <a href="#"><img src="http://placehold.it/21x21" width="21" height="21" alt="Закрыть"></a>
-          <span class="dialog-message">Товар добавлен в корзину!</span>
-          <div class="dialog-controls">
-            <a href="#" class="catalog-cart-order">Оформить заказ</a>
-            <a href="#" class="catalog-cart-continue">Продолжить покупки</a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -253,7 +248,7 @@
   <section class="footer-top">
     <div class="container">
       <div class="footer-row clearfix">
-        <a href="#" class="logo footer-logo">Техномарт</a>
+        <a href="index.html" class="logo footer-logo">Техномарт</a>
         <div class="footer-company-menu">
           <a href="#">Компания</a>
           <a href="#">Новости</a>
@@ -298,5 +293,15 @@
     </div>
   </section>
 </footer>
+<div class="dialog catalog-cart">
+  <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
+  <div class="dialog-content">
+    <span class="dialog-message">Товар добавлен в корзину!</span>
+  </div>
+  <div class="dialog-controls clearfix">
+    <a href="#" class="base-button catalog-cart-order">Оформить заказ</a>
+    <a href="#" class="base-button catalog-cart-continue">Продолжить покупки</a>
+  </div>
+</div>
 </body>
 </html>
