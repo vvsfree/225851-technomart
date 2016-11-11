@@ -963,7 +963,7 @@ header {
   margin-bottom: 68px;
 }
 
-.services-block input[type=radio] {
+.services input[type=radio] {
   display: none;
 }
 
@@ -1009,19 +1009,6 @@ header {
   cursor: pointer;
 }
 
-.services-list li:not(.active) a:hover {
-  background-color: #293449;
-}
-
-#delivery:checked ~ .services-list label[for="delivery"],
-#guarantee:checked ~ .services-list label[for="guarantee"],
-#credit:checked ~ .services-list label[for="credit"] {
-  color: #32425c;
-  background-color: #ffffff;
-  box-shadow: none;
-  cursor: default;
-}
-
 .services-items {
   float: right;
   width: 620px;
@@ -1033,9 +1020,30 @@ header {
   padding-top: 5px;
 }
 
-#delivery:checked ~ .services-items .services-item.delivery,
-#guarantee:checked ~ .services-items .services-item.guarantee,
-#credit:checked ~ .services-items .services-item.credit {
+#delivery:checked ~ .services-wrapper {
+  background: url("../img/srv-truck.png") right 18% top 25px no-repeat;
+}
+
+#guarantee:checked ~ .services-wrapper {
+  background: url("../img/srv-guarantee.png") right 15% top 3px no-repeat;
+}
+
+#credit:checked ~ .services-wrapper {
+  background: url("../img/srv-credit.png") right 14% top no-repeat;
+}
+
+#delivery:checked ~ .services-wrapper label[for="delivery"],
+#guarantee:checked ~ .services-wrapper label[for="guarantee"],
+#credit:checked ~ .services-wrapper label[for="credit"] {
+  color: #32425c;
+  background-color: #ffffff;
+  box-shadow: none;
+  cursor: default;
+}
+
+#delivery:checked ~ .services-wrapper .services-item.delivery,
+#guarantee:checked ~ .services-wrapper .services-item.guarantee,
+#credit:checked ~ .services-wrapper .services-item.credit {
   display: block;
 }
 
@@ -1045,24 +1053,12 @@ header {
   padding-right: 44px;
 }
 
-.services-item.delivery {
-  background: url("../img/srv-truck.png") right 25px no-repeat;
-}
-
 .services-item.delivery p {
   width: 278px;
 }
 
-.services-item.guarantee {
-  background: url("../img/srv-guarantee.png") 240px 3px no-repeat;
-}
-
 .services-item.guarantee p {
   width: 378px;
-}
-
-.services-item.credit {
-  background: url("../img/srv-credit.png") 182px top no-repeat;
 }
 
 .services-item.credit p {
@@ -1221,7 +1217,6 @@ header {
 }
 
 .catalog {
-  /*margin-top: 20px;*/
   padding-bottom: 61px;
 }
 
