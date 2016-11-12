@@ -230,6 +230,7 @@ header {
   opacity: 0.3;
 }
 
+.header-bookmarks.full,
 .header-cart.full {
   background-color: #ee3643;
 }
@@ -859,18 +860,20 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 220px;
   height: 88px;
   padding: 40px 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
 }
 
 .catalog-item-buy,
 .catalog-item-bookmark {
+  position: relative;
   display: block;
   width: 129px;
   margin: 0 auto 7px;
-  padding: 7px 0;
+  padding: 7px 0 7px 4px;
   border: 3px solid #63a63e;
   border-bottom-color: #367315;
   background-color: #63a63e;
@@ -884,11 +887,53 @@ header {
   border-radius: 3px;
 }
 
-.catalog-item-bookmark {
-  color: #32425c;
-  background: white;
-  border-bottom-color: #63a63e;
+.catalog-item-buy::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  width: 17px;
+  height: 16px;
+  margin-top: -8px;
+  background: url("../img/icon-cart.png");
+  opacity: 0.3;
 }
+
+.catalog-item-buy:hover {
+  border-color: #5fbb2d;
+  border-bottom-color: #367315;
+  background-color: #5fbb2d;
+}
+
+.catalog-item-buy:hover::before {
+  opacity: 1;
+}
+
+.catalog-item-buy:active {
+  border-color: #518534;
+  background-color: #518534;
+}
+
+.catalog-item-buy:active::before {
+  opacity: 1;
+}
+
+.catalog-item-bookmark {
+  color: rgb(50, 66, 92);
+  background: white;
+  border-color: #63a63e;
+}
+
+.catalog-item-bookmark:hover {
+  border-color: #32425c;
+}
+
+.catalog-item-bookmark:active {
+  color: rgba(50, 66, 92, 0.3);
+  border-color: #c1c6ce;
+}
+
+
 
 .catalog-item-controls {
   display: none;
@@ -1146,18 +1191,23 @@ header {
   width: 300px;
 }
 
+.company-form {
+  display: none;
+}
+
 .company-map {
   margin-bottom: 40px;
+}
+
+.company-map a {
+  display: block;
 }
 
 .company-map img {
   display: block;
   width: 300px;
   height: 158px;
-}
-
-.company-form {
-  display: none;
+  cursor: pointer;
 }
 
 .company-map-popup {
@@ -1169,8 +1219,12 @@ header {
   display: none;
   width: 940px;
   height: 446px;
-  background: url("../img/map-full.jpg") 0 0 no-repeat;
   box-shadow: 0 0 15px 1px rgba(35, 31, 32, 0.5);
+}
+
+.company-map-popup .dialog-close {
+  /* У yandex карты z-index 2500*/
+  z-index: 3000;
 }
 
 .page {
@@ -1806,14 +1860,25 @@ footer {
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 20;
   transform: translate(-50%, -50%);
 
   width: 620px;
-  z-index: 20;
 
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 18;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
 }
 
 .dialog .dialog-content {
@@ -1956,4 +2021,36 @@ footer {
 
 .dialog-controls .catalog-cart-continue:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.display-block {
+  display: block;
+}
+
+.dialog-animation {
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+@keyframes move {
+  from {
+    transform: translate(-50%, -50%) scale(0, 0);
+  }
+
+  25% {
+    transform: translate(-50%, -50%) scale(0.25, 0.25);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(0.5, 0.5);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) scale(0.75, 0.75);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
 }

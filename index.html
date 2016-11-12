@@ -16,8 +16,8 @@
         <input type="text" class="header-search-input" id="search" placeholder="Поиск:"><label for="search"></label>
       </form>
       <div class="header-top-wrapper">
-        <a href="#" class="header-bookmarks">Закладки: 0</a>
-        <a href="#" class="header-cart">Корзина: 0</a>
+        <a href="#" class="header-bookmarks">Закладки: <span class="count">0</span></a>
+        <a href="#" class="header-cart">Корзина: <span class="count">0</span></a>
         <a href="#" class="header-order">Оформить заказ</a>
       </div>
     </div>
@@ -47,9 +47,9 @@
       </div>
       <nav class="header-main-navigation">
         <ul>
-          <li><a href="#">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="#">Компания</a></li>
-          <li><a href="#">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Спецпредложения</a></li>
           <li><a href="#">Доставка</a></li>
@@ -248,11 +248,13 @@
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
         <div class="company-map">
-          <img src="img/map.jpg" width="300" height="158" alt="Карта">
+          <a href="https://yandex.ru/maps/?um=constructor:YJ4xoxBGQtJea5OFzjQLY0_5VHFywBNi&amp;source=constructorLink" target="_blank">
+            <img src="img/map.jpg" width="300" height="158" alt="Карта">
+          </a>
         </div>
-        <a href="#" class="base-button">Заблудились? Напишите нам!</a>
+        <a href="#" class="base-button company-write-us">Заблудились? Напишите нам!</a>
       </div>
-      <div class="company-map-popup">
+      <div id="company-map-full" class="company-map-popup">
         <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
       </div>
     </div>
@@ -307,25 +309,41 @@
     </div>
   </section>
 </footer>
-<div class="dialog company-form">
+<div class="dialog company-form dialog-animation">
   <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
-  <form>
+  <form action="https://echo.htmlacademy.ru" method="post">
     <div class="dialog-content clearfix">
       <div class="dialog-content-left">
         <label for="customer-name">Ваше имя:</label>
-        <input type="text" id="customer-name" name="customer-name" placeholder="Представьтесь, пожалуйста">
+        <input type="text" id="customer-name" name="customer-name" placeholder="Представьтесь, пожалуйста" required>
       </div>
       <div class="dialog-content-right">
         <label for="customer-email">Ваш e-mail:</label>
-        <input type="email" id="customer-email" name="customer-email" placeholder="Для отправки ответа">
+        <input type="email" id="customer-email" name="customer-email" placeholder="Для отправки ответа" required>
       </div>
       <label for="customer-message">Текст письма:</label>
-      <textarea id="customer-message" name="customer-message" placeholder="В свободной форме"></textarea>
+      <textarea id="customer-message" name="customer-message" placeholder="В свободной форме" required></textarea>
     </div>
     <div class="dialog-controls">
       <button type="submit" class="base-button company-form-submit">Отправить</button>
     </div>
   </form>
 </div>
+<div class="dialog catalog-cart">
+  <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
+  <div class="dialog-content">
+    <span class="dialog-message">Товар добавлен в корзину!</span>
+  </div>
+  <div class="dialog-controls clearfix">
+    <a href="#" class="base-button catalog-cart-order">Оформить заказ</a>
+    <a href="#" class="base-button catalog-cart-continue">Продолжить покупки</a>
+  </div>
+</div>
+<div class="dialog-overlay"></div>
+<script src="js/common.js"></script>
+<script src="js/items.js"></script>
+<script src="js/form.js"></script>
+<script src="js/map.js"></script>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=YJ4xoxBGQtJea5OFzjQLY0_5VHFywBNi&amp;width=940&amp;height=446&amp;lang=ru_RU&amp;sourceType=constructor&amp;id=company-map-full&amp;scroll=true"></script>
 </body>
 </html>
