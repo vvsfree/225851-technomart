@@ -1928,8 +1928,7 @@ footer {
   display: none;
   width: 100%;
   height: 100%;
-  /* Это для IE10. Он не может работать с пустыми div, ломается z-index, не работает подложка */
-  background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7");
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .dialog .dialog-content {
