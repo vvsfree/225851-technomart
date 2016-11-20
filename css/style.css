@@ -517,7 +517,6 @@ header {
 .header-main-navigation {
   font-size: 0;
   padding-left: 22px;
-  padding-right: 22px;
   background-color: #32425c;
   text-align: left;
   border-bottom: 5px solid #293449
@@ -531,6 +530,7 @@ header {
 
 .header-main-navigation li {
   display: inline-block;
+  margin-right: 1px;
 }
 
 .header-main-navigation a {
@@ -645,7 +645,7 @@ header {
 
 .flag-new::before {
   content: "";
-  background: transparent url(../img/spritesheet.png) no-repeat -5px -354px;
+  background: transparent url(../img/spritesheet.png) no-repeat -5px -355px;
 }
 
 .slider {
@@ -828,9 +828,30 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: block;
   max-width: 100%;
+}
+
+.catalog-item-image img.bfg-9000 {
+  top: 87px;
+  left: 110px;
+}
+
+.catalog-item-image img.bfg-3000 {
+  top: 84px;
+  left: 104px;
+}
+
+.catalog-item-image img.bfg-6000 {
+  top: 85px;
+  left: 100px;
+}
+
+.catalog-item-image img.bfg-2000 {
+  top: 84px;
+  left: 96px;
 }
 
 .catalog-item-title {
@@ -839,10 +860,11 @@ header {
   font-weight: 700;
   min-height: 40px;
   padding: 0 30px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
 
 .catalog-item-old-price {
+  display: block;
   min-height: 20px;
   margin-bottom: 9px;
   padding-left: 4px;
@@ -852,20 +874,21 @@ header {
 
 .catalog-item-price {
   position: relative;
-  width: 80px;
-  margin: 0 auto 21px 44px;
+  display: block;
+  width: 79px;
+  margin: 0 auto 21px 43px;
   padding: 10px 30px;
   color: white;
   background: #ee3643;
   border-radius: 3px;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 .catalog-item-price:after {
   content: "";
   position: absolute;
   top: 0;
-  right: -20px;
+  right: -23px;
   width: 0;
   height: 0;
   border: 20px solid white;
@@ -999,9 +1022,25 @@ header {
 .brand img {
   display: block;
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.brand img.interskol {
+  top: 44%;
+  left: 50%;
+}
+
+.brand img.hitachi {
+  top: 49%;
+  left: 51%;
+}
+
+.brand img.metabo {
+  top: 46%;
+  left: 52%;
 }
 
 .services {
@@ -1256,7 +1295,7 @@ header {
   position: relative;
   float: left;
   padding-right: 24px;
-  margin-right: 15px;
+  margin-right: 17px;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
@@ -1279,12 +1318,16 @@ header {
 .page-breadcrumbs span:not(:last-child)::before {
   content: "";
   position: absolute;
+  top: 3px;
   right: 0;
-  top: 50%;
-  margin-top: -8px;
   width: 7px;
   height: 12px;
   background: transparent url(../img/spritesheet.png) no-repeat -5px -31px;
+}
+
+.page-breadcrumbs span:first-child::before {
+  top: 3px;
+  right: 3px;
 }
 
 .page-title {
@@ -1401,8 +1444,6 @@ header {
   padding-top: 8px;
   background-color: #f7f3ec;
   border-radius: 3px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1516,6 +1557,7 @@ header {
     inset 0 -2px 0 0 #ffffff;
   border-bottom: 5px solid #c1c1c1;
   border-left: 5px solid #c1c1c1;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -1845,6 +1887,7 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 20px;
   height: 12px;
@@ -1857,6 +1900,7 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 10px;
   height: 18px;
@@ -1868,6 +1912,7 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 17px;
   height: 17px;
@@ -1911,6 +1956,7 @@ footer {
   top: 50%;
   left: 50%;
   z-index: 20;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
   width: 620px;
@@ -2037,10 +2083,12 @@ footer {
 }
 
 .dialog-close::before {
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .dialog-close::after {
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -2079,29 +2127,64 @@ footer {
 }
 
 .dialog-animation {
+  -webkit-animation-name: move;
   animation-name: move;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-@keyframes move {
+@-webkit-keyframes move {
   from {
+    -webkit-transform: translate(-50%, -50%) scale(0, 0);
     transform: translate(-50%, -50%) scale(0, 0);
   }
 
   25% {
+    -webkit-transform: translate(-50%, -50%) scale(0.25, 0.25);
     transform: translate(-50%, -50%) scale(0.25, 0.25);
   }
 
   50% {
+    -webkit-transform: translate(-50%, -50%) scale(0.5, 0.5);
     transform: translate(-50%, -50%) scale(0.5, 0.5);
   }
 
   75% {
+    -webkit-transform: translate(-50%, -50%) scale(0.75, 0.75);
     transform: translate(-50%, -50%) scale(0.75, 0.75);
   }
 
   to {
+    -webkit-transform: translate(-50%, -50%) scale(1, 1);
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0, 0);
+    transform: translate(-50%, -50%) scale(0, 0);
+  }
+
+  25% {
+    -webkit-transform: translate(-50%, -50%) scale(0.25, 0.25);
+    transform: translate(-50%, -50%) scale(0.25, 0.25);
+  }
+
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(0.5, 0.5);
+    transform: translate(-50%, -50%) scale(0.5, 0.5);
+  }
+
+  75% {
+    -webkit-transform: translate(-50%, -50%) scale(0.75, 0.75);
+    transform: translate(-50%, -50%) scale(0.75, 0.75);
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1, 1);
     transform: translate(-50%, -50%) scale(1, 1);
   }
 }
