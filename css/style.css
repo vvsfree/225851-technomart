@@ -806,7 +806,8 @@ header {
   position: relative;
 
   font-size: 17px;
-  line-height: 20px;
+  line-height: 18px;
+  font-weight: 700;
 
   display: inline-block;
   width: 220px;
@@ -857,7 +858,6 @@ header {
 .catalog-item-title {
   font-size: 18px;
   line-height: 20px;
-  font-weight: 700;
   min-height: 40px;
   padding: 0 30px;
   margin: 0 0 10px 0;
@@ -877,7 +877,7 @@ header {
   display: block;
   width: 79px;
   margin: 0 auto 21px 43px;
-  padding: 10px 30px;
+  padding: 10px 30px 12px 30px;
   color: white;
   background: #ee3643;
   border-radius: 3px;
@@ -1056,6 +1056,7 @@ header {
 .services h3 {
   margin: 0 0 31px 0;
   font-weight: normal;
+  color: #32425c;
 }
 
 .services-motto {
@@ -1098,8 +1099,9 @@ header {
 
   display: block;
   padding-left: 23px;
-  padding-top: 16px;
+  padding-top: 15px;
   padding-bottom: 16px;
+  min-height: 31px;
 
   background-color: #32425c;
   box-shadow:
@@ -1120,31 +1122,31 @@ header {
   padding-top: 5px;
 }
 
-#delivery:checked ~ .services-wrapper {
-  background: url("../img/srv-truck.png") right 18% top 25px no-repeat;
-}
-
-#guarantee:checked ~ .services-wrapper {
-  background: url("../img/srv-guarantee.png") right 15% top 3px no-repeat;
-}
-
-#credit:checked ~ .services-wrapper {
-  background: url("../img/srv-credit.png") right 14% top no-repeat;
-}
-
-#delivery:checked ~ .services-wrapper label[for="delivery"],
-#guarantee:checked ~ .services-wrapper label[for="guarantee"],
-#credit:checked ~ .services-wrapper label[for="credit"] {
+#delivery:checked ~ .services-list label[for="delivery"],
+#guarantee:checked ~ .services-list label[for="guarantee"],
+#credit:checked ~ .services-list label[for="credit"] {
   color: #32425c;
   background-color: #ffffff;
   box-shadow: none;
   cursor: default;
 }
 
-#delivery:checked ~ .services-wrapper .services-item.delivery,
-#guarantee:checked ~ .services-wrapper .services-item.guarantee,
-#credit:checked ~ .services-wrapper .services-item.credit {
+#delivery:checked ~ .services-items .services-item.delivery,
+#guarantee:checked ~ .services-items .services-item.guarantee,
+#credit:checked ~ .services-items .services-item.credit {
   display: block;
+}
+
+#delivery:checked ~ .services-items .services-item.delivery {
+  background: url("../img/srv-truck.png") right top 25px no-repeat;
+}
+
+#guarantee:checked ~ .services-items .services-item.guarantee {
+  background: url("../img/srv-guarantee.png") right top 3px no-repeat;
+}
+
+#credit:checked ~ .services-items .services-item.credit {
+  background: url("../img/srv-credit.png") right top no-repeat;
 }
 
 .services-item .base-button {
