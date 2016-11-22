@@ -13,8 +13,10 @@
   <section class="header-top">
     <div class="container clearfix">
       <a href="index.html" class="logo header-logo">Техномарт</a>
-      <form class="header-search">
-        <input type="text" class="header-search-input" id="search" placeholder="Поиск:"><label for="search"></label>
+      <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
+        <label for="search">Поиск:</label>
+        <input type="text" class="header-search-input" id="search" name="search" placeholder="Поиск:">
+        <button type="submit">Искать</button>
       </form>
       <div class="header-top-wrapper">
         <a href="#" class="header-bookmarks">Закладки: 0</a>
@@ -27,7 +29,7 @@
     <div class="container">
       <div class="header-bottom-info clearfix">
         <p class="header-company-description">
-          Интернет-магазин строительных материалов<br>и инструментов для ремонта
+          Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта
         </p>
         <div class="header-company-contacts">
           <div class="header-company-phone">+7 (812) 555-05-55</div>
@@ -91,19 +93,19 @@
             <div class="fieldset-label">Производители:</div>
             <ul>
               <li>
-                <input type="checkbox" name="company1" id="company1" checked/><label for="company1">BOSCH</label>
+                <input type="checkbox" class="fieldset-checkbox" name="company1" id="company1" checked/><label for="company1">BOSCH</label>
               </li>
               <li>
-                <input type="checkbox" name="company2" id="company2"/><label for="company2">Интерскол</label>
+                <input type="checkbox" class="fieldset-checkbox" name="company2" id="company2"/><label for="company2">Интерскол</label>
               </li>
               <li>
-                <input type="checkbox" name="company3" id="company3" checked/><label for="company3">Makita</label>
+                <input type="checkbox" class="fieldset-checkbox" name="company3" id="company3" checked/><label for="company3">Makita</label>
               </li>
               <li>
-                <input type="checkbox" name="company4" id="company4"/><label for="company4">DEWALT</label>
+                <input type="checkbox" class="fieldset-checkbox" name="company4" id="company4"/><label for="company4">DEWALT</label>
               </li>
               <li>
-                <input type="checkbox" name="company5" id="company5"/><label for="company5">Hitachi</label>
+                <input type="checkbox" class="fieldset-checkbox" name="company5" id="company5"/><label for="company5">Hitachi</label>
               </li>
             </ul>
           </div>
@@ -111,10 +113,10 @@
             <div class="fieldset-label">Питание:</div>
             <ul>
               <li>
-                <input type="radio" name="power-supply" id="power1" value="accumulator" checked><label for="power1">Аккумуляторные</label>
+                <input type="radio" class="fieldset-radio" name="power-supply" id="power1" value="accumulator" checked><label for="power1">Аккумуляторные</label>
               </li>
               <li>
-                <input type="radio" name="power-supply" id="power2" value="mains"><label for="power2">Сетевые</label>
+                <input type="radio" class="fieldset-radio" name="power-supply" id="power2" value="mains"><label for="power2">Сетевые</label>
               </li>
             </ul>
           </div>
@@ -257,8 +259,9 @@
     <div class="container">
       <h2>Пара слов о перфораторах</h2>
       <p>
-        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+        Существуют&nbsp;электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В
+        ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
       </p>
     </div>
   </section>
@@ -271,7 +274,7 @@
         <div class="footer-company-menu">
           <a href="#">Компания</a>
           <a href="#">Новости</a>
-          <a href="#">Каталог</a>
+          <a href="catalog.html">Каталог</a>
           <a href="#">Доставка</a>
           <a href="#">Контакты</a>
         </div>
@@ -313,7 +316,7 @@
   </section>
 </footer>
 <div class="dialog catalog-cart">
-  <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
+  <a href="catalog.html" class="dialog-close" title="Закрыть">Закрыть</a>
   <div class="dialog-content">
     <span class="dialog-message">Товар добавлен в корзину!</span>
   </div>

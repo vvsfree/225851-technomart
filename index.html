@@ -13,8 +13,10 @@
   <section class="header-top">
     <div class="container clearfix">
       <a href="#" class="logo header-logo">Техномарт</a>
-      <form class="header-search">
-        <input type="text" class="header-search-input" id="search" placeholder="Поиск:"><label for="search"></label>
+      <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
+        <label for="search">Поиск:</label>
+        <input type="text" class="header-search-input" id="search" name="search" placeholder="Поиск:">
+        <button type="submit">Искать</button>
       </form>
       <div class="header-top-wrapper">
         <a href="#" class="header-bookmarks">Закладки: 0</a>
@@ -27,7 +29,7 @@
     <div class="container">
       <div class="header-bottom-info clearfix">
         <p class="header-company-description">
-          Интернет-магазин строительных материалов<br>и инструментов для ремонта
+          Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта
         </p>
         <div class="header-company-contacts">
           <div class="header-company-phone">+7 (812) 555-05-55</div>
@@ -62,29 +64,29 @@
 </header>
 <main>
   <div class="container">
-    <div class="promo clearfix">
-      <div class="promo-item promo-materials flag flag-new">
-        <span>Материалы</span>
+    <div class="promo">
+      <div class="grid-element promo-item promo-materials flag flag-new">
+          <span>Материалы</span>
         <a href="#">На любой вкус</a>
       </div>
-      <div class="promo-item promo-tools">
+      <div class="grid-element promo-item promo-tools">
         <span>Инструмент</span>
         <a href="#">На все случаи</a>
       </div>
-      <div class="promo-item promo-equipment">
+      <div class="grid-element promo-item promo-equipment">
         <span>Техника</span>
         <a href="#">Для стройки</a>
       </div>
-      <div class="slider">
+      <div class="grid-element slider">
         <input type="radio" id="btn-1" name="toggle" checked>
         <input type="radio" id="btn-2" name="toggle">
         <div class="slides">
-          <div id="slide1" class="slide">
-            <b class="slide-header">Перфораторы</b><br>
-            <span>Настоящие мужские игрушки</span><br>
+          <div class="slide">
+            <h3 class="slide-header">Перфораторы</h3>
+            <span>Настроящие мужские игрушки</span>
           </div>
-          <div id="slide2" class="slide">
-            <b class="slide-header">Дрели</b><br>
+          <div class="slide">
+            <h3 class="slide-header">Дрели</h3>
             <span>Соседям на радость!</span>
           </div>
         </div>
@@ -100,13 +102,15 @@
           <a href="#" class="base-button">Открыть каталог</a>
         </div>
       </div>
-      <div class="promo-item promo-discount">
-        <span>Скидки 50%</span>
-        <a href="#">На 350 товаров</a>
-      </div>
-      <div class="promo-item promo-delivery">
-        <span>Доставка</span>
-        <a href="#">Бесплатно</a>
+      <div class="grid-element">
+        <div class="promo-item promo-discount">
+          <span>Скидки 50%</span>
+          <a href="#">На 350 товаров</a>
+        </div>
+        <div class="promo-item promo-delivery">
+          <span>Доставка</span>
+          <a href="#">Бесплатно</a>
+        </div>
       </div>
     </div>
 
@@ -198,36 +202,33 @@
       <p class="services-motto">Хороший интернет-магазин отличается от плохого не только ценами!
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <div class="services-wrapper clearfix">
-        <input type="radio" name="services-item" id="delivery" checked>
-        <input type="radio" name="services-item" id="guarantee">
-        <input type="radio" name="services-item" id="credit">
+        <input type="radio" name="services-item" id="delivery-btn" checked>
+        <input type="radio" name="services-item" id="guarantee-btn">
+        <input type="radio" name="services-item" id="credit-btn">
         <ul class="services-list">
-          <li><label for="delivery">Доставка</label></li>
-          <li><label for="guarantee">Гарантия</label></li>
-          <li><label for="credit">Кредит</label></li>
+          <li><label for="delivery-btn">Доставка</label></li>
+          <li><label for="guarantee-btn">Гарантия</label></li>
+          <li><label for="credit-btn">Кредит</label></li>
         </ul>
         <div class="services-items">
           <div class="services-item delivery">
             <h3>Доставка</h3>
-            <p>
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-              Ведь мы неплохо заработаем,<br>поднимая его на ваш на этаж!
-            </p>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+              Ведь мы неплохо заработаем,
+              поднимая его на ваш на этаж!</p>
           </div>
           <div class="services-item guarantee">
             <h3>Гарантия</h3>
-            <p>
-              Если купленный у нас товар поломается или заискрит,<br>
-              а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
-              Дом уж восстановите как-нибудь сами.
-            </p>
+            <p>Если купленный у нас товар поломается или заискрит,
+              а также в случае пожара, спровоцированного его возгаранием,
+              вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+              сгоревший товар на новый.
+              Дом уж восстановите как-нибудь сами.</p>
           </div>
           <div class="services-item credit">
             <h3>Кредит</h3>
-            <p>
-              Залезть в долговую яму стало проще!
-              Кредитные консультанты придут вам на помощь.
-            </p>
+            <p>Залезть в долговую яму стало проще!
+              Кредитные консультанты придут вам на помощь.</p>
             <a href="#" class="base-button">Отправить заявку</a>
           </div>
         </div>
@@ -240,7 +241,7 @@
         <h2>КОМПАНИЯ «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
         <div class="company-info-delivery">
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:</p>
           <ul>
             <li>Деловые линии</li>
@@ -252,7 +253,7 @@
       </div>
       <div class="company-contacts">
         <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами,<br>
+        <p>Вы можете забрать товар сами,
           заехав в наш офис:</p>
         <div class="company-map">
           <a href="https://yandex.ru/maps/?um=constructor:YJ4xoxBGQtJea5OFzjQLY0_5VHFywBNi&amp;source=constructorLink" target="_blank">
@@ -262,7 +263,7 @@
         <a href="form.html" class="base-button company-write-us">Заблудились? Напишите нам!</a>
       </div>
       <div id="company-map-full" class="company-map-popup">
-        <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
+        <a href="index.html" class="dialog-close" title="Закрыть">Закрыть</a>
       </div>
     </div>
   </section>
@@ -275,7 +276,7 @@
         <div class="footer-company-menu">
           <a href="#">Компания</a>
           <a href="#">Новости</a>
-          <a href="#">Каталог</a>
+          <a href="catalog.html">Каталог</a>
           <a href="#">Доставка</a>
           <a href="#">Контакты</a>
         </div>
@@ -317,7 +318,7 @@
   </section>
 </footer>
 <div class="dialog company-form dialog-animation">
-  <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
+  <a href="index.html" class="dialog-close" title="Закрыть">Закрыть</a>
   <form action="https://echo.htmlacademy.ru" method="post">
     <div class="dialog-content clearfix">
       <div class="dialog-content-left">
@@ -337,7 +338,7 @@
   </form>
 </div>
 <div class="dialog catalog-cart">
-  <button class="dialog-close" type="button" title="Закрыть">Закрыть</button>
+  <a href="index.html" class="dialog-close" title="Закрыть">Закрыть</a>
   <div class="dialog-content">
     <span class="dialog-message">Товар добавлен в корзину!</span>
   </div>
